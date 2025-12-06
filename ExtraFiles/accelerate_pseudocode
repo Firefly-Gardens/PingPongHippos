@@ -1,0 +1,12 @@
+ball_swallowed = False
+
+func ball_accelerate(level):
+	if level == 1:
+		ball slow
+	elif level == 2:
+		ball middle speed
+	elif level == 3:
+		ball fast
+	return
+
+TODO 1: 

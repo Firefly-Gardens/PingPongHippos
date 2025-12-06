@@ -14,4 +14,3 @@ func _process(_delta):
 			move_local_x(-10)
 		if Input.is_action_pressed("MoveRight"):
 			move_local_x(10)
-#TODO 3: Add the movement ability

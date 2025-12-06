@@ -1,3 +1,4 @@
+ball_hit = False
 ball_swallowed = False
 
 func ball_accelerate(level):
@@ -9,4 +10,5 @@ func ball_accelerate(level):
 		ball fast
 	return
 
-TODO 1: 
+TODO 1: Find an average ball speed
+TODO 2: Use the contact type to change speed

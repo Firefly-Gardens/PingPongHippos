@@ -5,6 +5,7 @@
 [sub_resource type="TileSet" id="TileSet_mdnja"]
 
 [node name="Node2D" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-12155.0]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(531, -280)

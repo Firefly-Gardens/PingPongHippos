@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dl50xk5d16uqr"]
 
 [ext_resource type="Texture2D" uid="uid://cl6c5mrmtewea" path="res://ExtraFiles/256TilesetTemplate.png" id="1_fwuba"]
-[ext_resource type="Script" path="res://ExtraFiles/character_body_2d.gd" id="1_om7rj"]
+[ext_resource type="Script" uid="uid://denq0agcg6754" path="res://ExtraFiles/character_body_2d.gd" id="1_om7rj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oq1yk"]
 size = Vector2(437.671, 32)
@@ -52,3 +52,5 @@ script = ExtResource("1_om7rj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(2, -38)
 shape = SubResource("CapsuleShape2D_nd10j")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

@@ -1,7 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dl50xk5d16uqr"]
+[gd_scene load_steps=9 format=3 uid="uid://dl50xk5d16uqr"]
 
 [ext_resource type="Texture2D" uid="uid://cl6c5mrmtewea" path="res://ExtraFiles/256TilesetTemplate.png" id="1_fwuba"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://denq0agcg6754" path="res://ExtraFiles/character_body_2d.gd" id="1_om7rj"]
+=======
+[ext_resource type="Script" path="res://ExtraFiles/character_body_2d.gd" id="1_om7rj"]
+[ext_resource type="Script" path="res://ExtraFiles/ping_pong_ball.gd" id="3_m7ixt"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oq1yk"]
 size = Vector2(437.671, 32)
@@ -32,6 +37,8 @@ sources/1 = SubResource("TileSetAtlasSource_wolgy")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nd10j"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bn15x"]
+
 [node name="Node2D" type="Node2D"]
 metadata/_edit_vertical_guides_ = [-12155.0]
 
@@ -53,4 +60,12 @@ script = ExtResource("1_om7rj")
 position = Vector2(2, -38)
 shape = SubResource("CapsuleShape2D_nd10j")
 
+<<<<<<< Updated upstream
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+=======
+[node name="Ping_pong_ball" type="CharacterBody2D" parent="."]
+script = ExtResource("3_m7ixt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ping_pong_ball"]
+shape = SubResource("CapsuleShape2D_bn15x")
+>>>>>>> Stashed changes

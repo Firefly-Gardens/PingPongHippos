@@ -1,17 +1,54 @@
-[gd_scene load_steps=3 format=4 uid="uid://dl50xk5d16uqr"]
+[gd_scene load_steps=7 format=3 uid="uid://dl50xk5d16uqr"]
 
-[ext_resource type="Texture2D" uid="uid://05cf6jj0aql3" path="res://ExtraFiles/PrototypeSprite.png" id="1_nqa2s"]
+[ext_resource type="Texture2D" uid="uid://cl6c5mrmtewea" path="res://ExtraFiles/256TilesetTemplate.png" id="1_fwuba"]
+[ext_resource type="Script" path="res://ExtraFiles/character_body_2d.gd" id="1_om7rj"]
 
-[sub_resource type="TileSet" id="TileSet_mdnja"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oq1yk"]
+size = Vector2(437.671, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wolgy"]
+resource_name = "Tileset"
+texture = ExtResource("1_fwuba")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+0:0/0/modulate = Color(0.74558, 0.74558, 0.74558, 1)
+4:0/size_in_atlas = Vector2i(4, 4)
+4:0/0 = 0
+8:0/size_in_atlas = Vector2i(4, 4)
+8:0/0 = 0
+12:0/size_in_atlas = Vector2i(4, 4)
+12:0/0 = 0
+0:4/size_in_atlas = Vector2i(4, 4)
+0:4/0 = 0
+4:4/size_in_atlas = Vector2i(4, 4)
+4:4/0 = 0
+8:4/size_in_atlas = Vector2i(4, 4)
+8:4/0 = 0
+12:4/size_in_atlas = Vector2i(4, 4)
+12:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_e1crm"]
+sources/1 = SubResource("TileSetAtlasSource_wolgy")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nd10j"]
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_vertical_guides_ = [-12155.0]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-position = Vector2(531, -280)
-tile_map_data = PackedByteArray("AAAEAAcAAAAAAAAAAAALAAMAAAAAAAAAAAAMAAoAAAAAAAAAAAAbAAYAAAAAAAAAAAAUAA0AAAAAAAAAAAAsAAgAAAAFAAQAAAAjAAsAAAAFAAQAAAA/AAUAAAAFAAQAAAAjAAMAAAAFAAQAAAA5AA0AAAAFAAQAAAA=")
-tile_set = SubResource("TileSet_mdnja")
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(242, 229)
-texture = ExtResource("1_nqa2s")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(30.489, 40)
+scale = Vector2(0.614667, -1.92784)
+shape = SubResource("RectangleShape2D_oq1yk")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="StaticBody2D"]
+tile_map_data = PackedByteArray(0, 0, 251, 255, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 8, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_e1crm")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_om7rj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(2, -38)
+shape = SubResource("CapsuleShape2D_nd10j")

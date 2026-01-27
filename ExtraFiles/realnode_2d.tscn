@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dub2lbr50rg8q"]
+
+[ext_resource type="SpriteFrames" uid="uid://cvtyif77ubsqa" path="res://Sprites/new_sprite_frames.tres" id="1_5sqc3"]
+[ext_resource type="Script" uid="uid://dfefelmelubr1" path="res://Sprites/character_body_2d.gd" id="2_5yb1v"]
+[ext_resource type="Script" uid="uid://mgmxa5f0rtp3" path="res://ExtraFiles/animated_sprite_2d.gd" id="2_m11ak"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m11ak"]
+radius = 121.005356
+height = 295.99872
+
+[node name="REALNODE2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(589, -7)
+scale = Vector2(0.5092379, 0.5300231)
+sprite_frames = ExtResource("1_5sqc3")
+script = ExtResource("2_m11ak")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="AnimatedSprite2D"]
+motion_mode = 1
+script = ExtResource("2_5yb1v")
+
+[node name="BodyCollision" type="CollisionShape2D" parent="AnimatedSprite2D/CharacterBody2D"]
+position = Vector2(40.000004, 35)
+rotation = -1.5678576
+shape = SubResource("CapsuleShape2D_m11ak")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(6.6, 6.719999)
+zoom = Vector2(0.5, 0.5)

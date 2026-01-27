@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://cvtyif77ubsqa"]
+
+[ext_resource type="Texture2D" uid="uid://bqrxa46s67taj" path="res://Sprites/IMG_0878.png" id="1_nx5gi"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nx5gi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

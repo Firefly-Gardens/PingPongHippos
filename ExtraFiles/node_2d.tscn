@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dl50xk5d16uqr"]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Texture2D" uid="uid://cl6c5mrmtewea" path="res://ExtraFiles/256TilesetTemplate.png" id="1_fwuba"]
 <<<<<<< Updated upstream
